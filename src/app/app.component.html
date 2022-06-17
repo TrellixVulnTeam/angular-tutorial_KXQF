@@ -5,7 +5,8 @@
   {{name}}
   <input type="text" [(ngModel)]=name>
   <br>
-  <button (click)="callName()">Name</button>
+  <button (click)="toggleShow()"></button>
+  <div draggable="true" (dragend)="updateXy($event)" class="box" [ngStyle]="{left: x + 'px', top: y + 'px'}" *ngIf="show"></div>
 </div>
 
 <!-- 

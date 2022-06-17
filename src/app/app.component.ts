@@ -7,8 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name: string = 'bob';
+  x: number = 0;
+  y: number = 0;
+  show: boolean = true;
+
   callName() {
     alert(this.name);
+  }
+  updateXy(event: DragEvent){
+    this.x = event.clientX
+    this.y = event.clientY
+    console.log(event)
+  }
+  toggleShow(){
+    this.show = !this.show;
+    console.log(this.show)
   }
 }
 
